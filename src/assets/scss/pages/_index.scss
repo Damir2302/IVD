@@ -1,0 +1,696 @@
+main {
+    background: url('../images/bg.png') no-repeat;
+    background-position: 50% -1%;
+    position: relative;
+
+    @include breakpoint(xs) {
+        background-position: 43% -1%;
+    }
+
+    @include breakpoint(md) {
+        background-position: 47% -2%;
+    }
+
+    @include breakpoint(lg) {
+        background-position: top;
+    }
+}
+
+main::before {
+
+    @include breakpointMax(xs) {
+        content: '';
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0.93) 30.17%, rgba(255, 255, 255, 0) 98.24%);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+    }
+}
+
+.section-hero {
+    padding-bottom: 100px;
+
+    @include breakpoint(lg) {
+        padding-bottom: 190px;
+    }
+}
+
+.hero__title {
+    padding-top: 100px;
+    max-width: 320px;
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 115%;
+
+    @include breakpoint(xs) {
+        max-width: 680px;
+    }
+
+    @include breakpoint(md) {
+        font-size: 50px;
+    }
+
+    @include breakpoint(lg) {
+        padding-top: 174px;
+        font-size: 60px;
+    }
+}
+
+.hero__subtitle {
+    margin-top: 20px;
+    font-size: 18px;
+
+    @include breakpoint(xs) {
+        font-size: 20px;
+    }
+}
+
+.hero .button-style {
+    margin-top: 50px;
+    width: 224px;
+    height: 60px;
+    font-weight: 500;
+
+    @include breakpoint(md) {
+        margin-top: 70px;
+    }
+
+    @include breakpoint(lg) {
+        margin-top: 80px;
+    }
+}
+
+.section-title {
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 44px;
+
+    @include breakpoint(md) {
+        font-size: 40px;
+        line-height: 50px;
+    }
+}
+
+.section-services {
+    padding-bottom: 60px;
+
+    @include breakpoint(md) {
+        padding-bottom: 70px;
+    }
+
+    @include breakpoint(lg) {
+        padding-bottom: 80px;
+    }
+
+    @include breakpoint(xl) {
+        padding-bottom: 100px;
+    }
+}
+
+.section-services .section-title {
+    margin-bottom: 30px;
+
+    @include breakpoint(xs) {
+        margin-bottom: 40px;
+    }
+
+    @include breakpoint(lg) {
+        margin-bottom: 50px;
+    }
+}
+
+.services {
+
+    @include breakpoint(xs) {
+        margin-left: -20px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    @include breakpoint(lg) {
+        margin-left: -30px;
+    }
+
+    @include breakpoint(xl) {
+        margin-left: -40px;
+    }
+}
+
+.services__block {
+    margin-bottom: 20px;
+    padding: 20px 15px;
+    background: #FFFFFF;
+    width: 100%;
+    border-radius: 5px;
+
+    @include breakpoint(xs) {
+        margin-left: 20px;
+        width: calc((100% / 2) - 20px);
+    }
+
+    @include breakpoint(lg) {
+        margin-left: 30px;
+        margin-bottom: 30px;
+        width: calc((100% / 3) - 30px);
+    }
+
+    @include breakpoint(xl) {
+        margin-left: 40px;
+        margin-bottom: 40px;
+        padding: 30px;
+        width: calc((100% / 3) - 40px);
+    }
+}
+
+.services__block:first-child {
+    background: #869DA8;
+    width: 100%;
+    color: #fff;
+
+    @include breakpoint(lg) {
+        width: calc(((100% / 3) * 2) - 30px);
+    }
+
+    @include breakpoint(xl) {
+        width: calc(((100% / 3) * 2) - 40px);
+    }
+}
+
+.services__block-icon {
+    margin-bottom: 20px;
+    width: 30px;
+    height: 30px;
+
+    @include breakpoint(xs) {
+        margin-bottom: 30px;
+    }
+
+    @include breakpoint(md) {
+        width: 50px;
+        height: 50px;
+    }
+
+    @include breakpoint(xl) {
+        margin-bottom: 50px;
+        width: 70px;
+        height: 70px;
+    }
+}
+
+.services__block-title {
+    margin-bottom: 12px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 31px;
+
+    @include breakpoint(md) {
+        font-size: 20px;
+    }
+
+    @include breakpoint(lg) {
+        font-size: 25px;
+    }
+}
+
+.services__block-text {
+    font-size: 16px;
+    line-height: 140%;
+
+    @include breakpoint(xl) {
+        font-size: 18px;
+    }
+}
+
+.services__block-text ul {
+    margin-top: 25px;
+    margin-left: 20px;
+}
+
+
+.services__block-text ul,
+.services__block-text li {
+    list-style-type: disc;
+}
+
+.services__banner {
+    margin-top: 40px;
+    padding: 30px 24px;
+    background: #869DA8;
+    border-radius: 5px;
+
+    @include breakpoint(xs) {
+        margin-top: 20px;
+        padding: 30px 74px;
+    }
+
+    @include breakpoint(md) {
+        margin-top: 30px;
+        padding: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    @include breakpoint(lg) {
+        margin-top: 40px;
+        padding: 40px;
+    }
+}
+
+.services__banner-label {
+    max-width: 375px;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 28px;
+    color: #fff;
+    text-align: center;
+
+    @include breakpoint(md) {
+        font-size: 25px;
+        line-height: 31px;
+        text-align: unset;
+    }
+
+    @include breakpoint(lg) {
+        font-size: 30px;
+        line-height: 38px;
+    }
+}
+
+.services__banner .button-style {
+    margin: 20px auto 0;
+    width: 250px;
+    height: 60px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+
+    @include breakpoint(md) {
+        margin: 0;
+    }
+}
+
+.section-about {
+    padding: 60px 0;
+    background: #fff;
+
+    @include breakpoint(md) {
+        padding: 70px 0;
+    }
+
+    @include breakpoint(lg) {
+        padding: 80px 0;
+    }
+
+    @include breakpoint(xl) {
+        padding: 100px 0;
+    }
+}
+
+.about {
+
+    @include breakpoint(lg) {
+        display: flex;
+        align-items: baseline;
+    }
+}
+
+.section-about .section-title {
+    margin-bottom: 15px;
+}
+
+.about__left {
+
+    @include breakpoint(lg) {
+        width: calc(((100% / 12) * 6) - 15px);
+    }
+}
+
+.about__left p {
+    font-size: 16px;
+    line-height: 140%;
+
+    @include breakpoint(xl) {
+        font-size: 18px;
+    }
+}
+
+.about-slider {
+    margin: 30px 0 0;
+    padding: 0 24px;
+    position: relative;
+    max-width: 580px;
+
+    @include breakpoint(lg) {
+        margin: 40px 0 0;
+        padding: 0;
+    }
+}
+
+.about-slider .swiper-slide {
+    padding: 22px 7px;
+    background: #FFFFFF;
+    box-sizing: border-box;
+    border: 1px solid #E1E1E1;
+    text-align: center;
+
+    @include breakpoint(lg) {
+        padding: 24px 42px;
+    }
+
+    @include breakpoint(xl) {
+        padding: 3.5px 36px;
+    }
+}
+
+.about-slider .swiper-slide img {
+    width: 117px;
+    height: 66px;
+
+    @include breakpoint(xs) {
+        width: 142px;
+        height: 80px;
+    }
+
+    @include breakpoint(xl) {
+        width: 198px;
+        height: 113px;
+    }
+}
+
+.navigations {
+    margin: 20px auto 0;
+    position: absolute;
+    top: calc(50% - 30px);
+    left: -5px;
+    width: calc(100% + 10px);
+    display: flex;
+    justify-content: space-between;
+
+    @include breakpoint(lg) {
+        position: static;
+        max-width: 60px;
+    }
+
+    @include breakpoint(xl) {
+        margin: 0;
+        position: absolute;
+        top: calc(50% - 12px);
+        left: -32px;
+        width: calc(100% + 64px);
+        max-width: unset;
+    }
+}
+
+.button-left,
+.button-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.button-left::before,
+.button-right::before {
+    content: '';background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE1IDE4TDkgMTJMMTUgNiIgc3Ryb2tlPSIjODY5REE4IiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8L3N2Zz4K) no-repeat;
+    position: relative;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+}
+
+.button-right::before {
+    transform: rotate(180deg);
+}
+
+.about__right {
+    margin-top: 40px;
+
+    @include breakpoint(md) {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    @include breakpoint(lg) {
+        margin-top: 0;
+        margin-left: 110px;
+        display: block;
+        width: calc(((100% / 12) * 5) - 15px);
+        max-width: 477px;
+    }
+}
+
+.about__block {
+    margin-bottom: 40px;
+
+    @include breakpoint(md) {
+        width: calc((100% / 3) - (40px / 3));
+    }
+
+    @include breakpoint(lg) {
+        width: auto;
+    }
+}
+
+.about__block:last-child {
+    margin-bottom: 0;
+}
+
+.block-num {
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 31px;
+    color: #B5C7D3;
+
+    @include breakpoint(xs) {
+        margin-bottom: 12px;
+        font-size: 40px;
+        line-height: 50px;
+    }
+
+    @include breakpoint(lg) {
+        margin-bottom: 16px;
+    }
+
+    @include breakpoint(xl) {
+        margin-bottom: 12px;
+    }
+}
+
+.block-title {
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 23px;
+
+    @include breakpoint(md) {
+        font-size: 20px;
+        line-height: 25px;
+    }
+
+    @include breakpoint(lg) {
+        margin-bottom: 16px;
+        font-size: 25px;
+        line-height: 31px;
+    }
+
+    @include breakpoint(xl) {
+        margin-bottom: 12px;
+    }
+}
+
+.block-text {
+    font-size: 16px;
+    line-height: 140%;
+
+    @include breakpoint(xl) {
+        font-size: 18px;
+    }
+}
+
+.section-contacts {
+    padding: 60px 0;
+
+    @include breakpoint(md) {
+        padding: 70px 0;
+    }
+
+    @include breakpoint(lg) {
+        padding: 80px 0;
+    }
+
+    @include breakpoint(xl) {
+        padding: 100px 0;
+    }
+}
+
+.section-contacts .section-title {
+    margin-bottom: 30px;
+
+    @include breakpoint(lg) {
+        margin-bottom: 50px;
+    }
+}
+
+.contacts {
+
+    @include breakpoint(md) {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.contacts__left {
+
+    @include breakpoint(md) {
+        width: calc(((100% / 12) * 4));
+        max-width: 322px;
+    }
+
+    @include breakpoint(xl) {
+        margin-right: 195px;
+        width: 100%;
+    }
+}
+
+.contacts__left-row {
+    margin-bottom: 20px;
+}
+
+.contacts-label {
+    margin-bottom: 8px;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: #869DA8;
+}
+
+.contact-phone {
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 33px;
+}
+
+.contacts__left-row a,
+.contacts__left-row p {
+    font-size: 20px;
+}
+
+.contacts__right {
+    margin-top: 50px;
+
+    @include breakpoint(md) {
+        margin-top: 0;
+        width: calc(((100% / 12) * 7) - 20px);
+        max-width: 680px;
+    }
+
+    @include breakpoint(xl) {
+        width: 100%;
+    }
+}
+
+.contacts__right-title {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 28px;
+
+    @include breakpoint(md) {
+        font-size: 25px;
+        line-height: 31px;
+    }
+
+    @include breakpoint(lg) {
+        font-size: 30px;
+        line-height: 38px;
+    }
+}
+
+.contacts__right-subtitle {
+    margin-top: 12px;
+    font-size: 18px;
+
+    @include breakpoint(xs) {
+        font-size: 20px;
+    }
+}
+
+.contacts__form {
+    margin-top: 20px;
+
+    @include breakpoint(md) {
+        margin-top: 40px;
+    }
+}
+
+.contacts__form input:not(.form-submit input) {
+    margin-bottom: 20px;
+    padding: 20px 24px;
+    background: #FFFFFF;
+    width: 100%;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.contacts__form textarea {
+    padding: 20px 24px;
+    background: #FFFFFF;
+    width: 100%;
+    height: 188px;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.contacts__form input::placeholder,
+.contacts__form textarea::placeholder {
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: #686868;
+}
+
+.form-submit {
+    margin-top: 20px;
+
+    @include breakpoint(md) {
+        margin-top: 40px;
+        display: flex;
+    }
+}
+
+.form-submit .button-style {
+    width: 100%;
+    max-width: 330px;
+    height: 60px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #F4F4F4;
+
+    @include breakpoint(md) {
+        min-width: 242px;
+    }
+}
+
+.form-submit p {
+    margin-top: 15px;
+    font-size: 16px;
+    line-height: 20px;
+    color: #959595;
+
+    @include breakpoint(md) {
+        margin-top: 0;
+        margin-left: 15px;
+    }
+
+    @include breakpoint(xl) {
+        margin-left: 45px;
+    }
+}
+
+.form-submit p a {
+    text-decoration: underline;
+}

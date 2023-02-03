@@ -1,0 +1,165 @@
+---
+title: IVD | Главная
+---
+
+extends includes/_page
+
+block main
+
+    .section-hero
+
+        .container
+
+            .hero
+
+                h1.hero__title In Vitro Diagnostic & Consulting
+                p.hero__subtitle Registration of IVD medical devices
+
+                .request-btn.button-style.button-style--black(data-src="#popup-form") Get advice
+
+    .section-services#services
+
+        .container
+
+            h2.section-title Services
+
+            .services
+
+                .services__block
+                    .services__block-icon
+                        img(src="assets/images/icon-notes.png", alt="icon")
+                    h4.services__block-title Medical devices registration for distribution in Russia and the EEU countries
+                    .services__block-text
+                        p Providing the IVD medical devices registration in accordance with the Russian Federation’s national rules and the EEU countries’ rules (Armenia, Belarus, Kazakhstan, Kyrgyzstan and Russia).
+
+                .services__block
+                    .services__block-icon
+                        img(src="assets/images/icon-microscope.png", alt="icon")
+                    h4.services__block-title Technical tests
+                    .services__block-text
+                        p Technical tests’ preparation, control and results analysis:
+                        ul
+                            li test lab selection
+                            li designing a testing program
+                            li technical writing of necessary documents
+
+                .services__block
+                    .services__block-icon
+                        img(src="assets/images/icon-identify.png", alt="icon")
+                    h4.services__block-title Toxicological studies
+                    .services__block-text
+                        p Toxicological studies preparation for individual cases (e.g. swabs for collecting samples)
+
+                .services__block
+                    .services__block-icon
+                        img(src="assets/images/icon-dropper.png", alt="icon")
+                    h4.services__block-title Clinical trials organization
+                    .services__block-text
+                        p Clinical trials preparation, control and results analysis:
+                        ul
+                            li clinical site selection
+                            li clinical study program design
+                            li obtained results analysis and documents preparation
+
+                .services__block
+                    .services__block-icon
+                        img(src="assets/images/icon-clipboard.png", alt="icon")
+                    h4.services__block-title Technical documents review & dossier creation
+                    .services__block-text
+                        p Technical documentation review for compliance with regulatory requirements
+
+            .services__banner
+                .services__banner-label Leave enquiry to ask for&nbsp;a &nbsp;ervice or get&nbsp;advice
+                .request-btn.button-style.button-style--white(data-src="#popup-form") Leave enquiry
+
+    .section-about#about-us
+
+        .container
+
+            .about
+
+                .about__left
+                    h2.section-title About
+
+                    p IVD Consulting LLC is a consulting company focused on the in-vitro diagnostic medical devices regulation.
+                        br
+                        br
+                        | <b>Our mission</b> is to improve healthcare with helping medical devices manufacturers to access the market of the Russian Federation and the EEU countries.
+                        br
+                        br
+                        | <b>Our team</b> - experts with specialized technical, pharmaceutical and medical education, experience at state laboratories and medical institutions, and competence in IVD medical devices testing and examination.
+                        br
+                        br
+                        | Thanks to the quality of our work and adherence to deadlines, we have built long-term and trusting relationships with the world's leading brands of IVD medical devices, such as: Abbott Laboratories, Roche Diagnostics and others.
+
+                    .about-slider
+                        .swiper
+                            .swiper-wrapper
+                                .swiper-slide
+                                    img(src="assets/images/abbott.jpg", alt="img")
+
+                                .swiper-slide
+                                    img(src="assets/images/roche.jpg", alt="img")
+
+                                .swiper-slide
+                                    img(src="assets/images/abbott.jpg", alt="img")
+
+                                .swiper-slide
+                                    img(src="assets/images/roche.jpg", alt="img")
+
+                        .navigations
+                            .button-left
+                            .button-right
+
+                .about__right
+                    .about__block
+                        .block-num 01
+                        .block-title Professional approach to business
+                        .block-text We find optimal solution to the IVD medical devices registration cases of any complexity. Registration of IVD medical devices minimizing distribution risks in case of further state MD oversight.
+
+                    .about__block
+                        .block-num 02
+                        .block-title Experience and partnership
+                        .block-text Availability of many successfully completed projects gives us the opportunity to build long-term partnerships for mutual benefit.
+
+                    .about__block
+                        .block-num 03
+                        .block-title Sustainable development
+                        .block-text We constantly monitor legislative changes and deepen our expertise in the field.
+
+    .section-contacts#contacts
+
+        .container
+
+            .contacts
+
+                .contacts__left
+                    h2.section-title Contacts
+
+                    .contacts__left-row
+                        .contacts-label Phone
+                        a.contact-phone(href="tel:+7 (495) 198 08 92") +7 (495) 198 08 92
+
+                    .contacts__left-row
+                        .contacts-label e-mail
+                        a.contact-email(href="mailto:info@ivdconsult.com") info@ivdconsult.com
+
+                    .contacts__left-row
+                        .contacts-label address
+                        p Office 211, house 12, building 2, Teterensky lane, Moscow
+
+                .contacts__right
+                    h3.contacts__right-title Still have questions or need advice?
+                    .contacts__right-subtitle Fill in the form and we will contact you soon
+
+                    .contacts__form
+
+                        form
+
+                            input(type="text" placeholder="Name")
+                            input(type="text" placeholder="Phone or e-mail")
+                            textarea(placeholder="Мessage")
+
+                            .form-submit
+                                button.button-style.button-style--black(type="submit") Get the consultation
+                                p By clicking on the button, you consent to the processing of personal data and agree with the <a href="#">privacy policy</a>.

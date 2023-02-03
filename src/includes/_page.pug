@@ -1,0 +1,116 @@
+doctype html
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+
+        title= title || 'Page name'
+
+        // Styles::Start
+        include _loadCss
+        // Styles::End
+
+        // Yandex Map
+        if yandexMap == true
+            script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU")
+
+    body(class= bodyClass ? bodyClass : '')
+
+        #page
+
+            // Header::Start
+            block header
+                include _header
+            // Header::End
+
+            // Main::Start
+            main#main
+                block main
+            // Main::End
+
+            // Footer::Start
+            block footer
+                include _footer
+            // Footer::End
+
+        // Popup-1::Start
+        .popup-form#popup-form
+
+            .popup-form__title Fill in the form and we will contact you soon
+
+            .form
+                form(action="/")
+
+                    .p-form__container
+
+                        .p-form__main
+
+                            .p-form-row
+                                .input-style
+                                    input(type="text" placeholder="Name" autocomplete="off")
+
+                            .p-form-row
+                                .input-style
+                                    input(type="tel" placeholder="Phone" autocomplete="off")
+
+                            .p-form-row
+                                .input-style
+                                    input(type="email" placeholder="E-mail" autocomplete="off")
+
+                            .textarea-style
+                                textarea(type="text" placeholder="Мessage")
+
+                            button.button-style.button-style--black.wpcf7-form-control.wpcf7-submit(type="submit" tabindex="0") Get the consultation
+
+                            .agreement By clicking on the button, you consent to the processing of personal data and agree with the <a href="#">privacy policy</a>.
+        // Popup-1::End
+
+        // Popup-2::Start
+        .popup-form#popup-callback
+
+            .popup-form__title Request call
+            .popup-form__subtitle Fill in the form and we will contact you soon
+
+            .form
+                form(action="/")
+
+                    .p-form__container
+
+                        .p-form__main
+
+                            .p-form-row
+                                .input-style
+                                    input(type="text" placeholder="Name" autocomplete="off")
+
+                            .p-form-row
+                                .input-style
+                                    input(type="tel" placeholder="Phone *" autocomplete="off")
+
+                            button.button-style.button-style--black.wpcf7-form-control.wpcf7-submit(type="submit" tabindex="0") Leave enquiry
+
+                            .agreement By clicking on the button, you consent to the processing of personal data and agree with the <a href="#">privacy policy</a>.
+        // Popup-2::End
+
+        // Popup SUCCESS::Start
+        #popup-success.popup-success
+            .popup-form__title Thank you!
+            .popup-form__subtitle We will contact you soon
+        // Popup SUCCESS::End
+
+        // Popup ERROR::Start
+        #popup-error.popup-error
+            .popup-form__title Error!
+            .popup-form__subtitle Something went wrong
+
+            .popup-contacts
+                .popup-contacts-title Contact us
+                .popup-contacts-label Phone
+                a.popup-contacts-phone(href="tel:+7 (495) 198 08 92") +7 (495) 198 08 92
+                .popup-contacts-label e-mail
+                a.popup-contacts-mail(href="mailto:info@ivdconsult.com") info@ivdconsult.com
+        // Popup ERROR::End
+
+        // Scripts::Start
+        include _loadScripts
+        // Scripts::End

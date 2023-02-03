@@ -1,0 +1,36 @@
+include _mixins
+block header
+
+    header#header.header
+
+        .container
+
+            .header__inner
+
+                .header__logo
+                    a(href="/")
+                        img(src="assets/images/logo.svg", alt="logo")
+
+                nav.navbar
+                    ul
+                        li
+                            a(href="#services") Services
+                        li
+                            a(href="#about-us") About Us
+                        li
+                            a(href="#contacts") Contacts
+
+                    .navbar__phone
+                        | Phone
+                        a(href="tel:+7 (495) 198 08 92") +7 (495) 198 08 92
+                        #callback-btn.button-style.button-style--transparent(data-src="#popup-callback") Request call
+
+                .header__right
+                    .header__phone
+                        span Phone
+                        a(href="tel:+7 (495) 198 08 92") +7 (495) 198 08 92
+
+                    .header__btn
+                        #callback-btn.button-style.button-style--transparent(data-src="#popup-callback") Request call
+
+                    .header__burger
