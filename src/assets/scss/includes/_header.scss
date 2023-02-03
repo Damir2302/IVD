@@ -17,36 +17,41 @@ header {
     height: 37px;
 
     @include breakpoint(md) {
+        flex-shrink: 0;
         width: 167px;
         height: 57px;
     }
 }
 
 .navbar {
-    padding: 80px 20px 50px;
-    background: #869DA8;
-    position: fixed;
-    top: 0;
-    left: 100%;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-    color: #fff;
-    transition: left 0.5s ease;
-    z-index: 9;
 
-    @include breakpoint(sm) {
-        padding: 80px 30px 50px;
+    @include breakpointMax(lg) {
+        padding: 80px 20px 50px;
+        background: #869DA8;
+        position: fixed;
+        top: 0;
+        left: 100%;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        color: #fff;
+        transition: left 0.5s ease;
+        z-index: 9;
     }
 
-    @include breakpoint(md) {
+    @include breakpointMax(md) {
         padding: 85px 30px 50px;
+    }
+
+    @include breakpointMax(sm) {
+        padding: 80px 30px 50px;
     }
 
     @include breakpoint(lg) {
         margin-left: 44px;
         display: block;
+        flex-shrink: 0;
     }
 
     @include breakpoint(xl) {
@@ -67,12 +72,15 @@ header {
     }
 }
 
-.navbar li {
-    margin-right: 30px;
-}
-
 .navbar li ~ li {
-    margin-top: 30px;
+
+    @include breakpointMax(lg) {
+        margin-top: 30px;
+    }
+
+    @include breakpoint(lg) {
+        margin-left: 30px;
+    }
 }
 
 .navbar__phone {
@@ -95,6 +103,7 @@ header {
     font-size: 18px;
     line-height: 23px;
     color: #fff;
+
 }
 
 .navbar__phone .button-style {
@@ -112,6 +121,11 @@ header {
     margin-left: auto;
     display: flex;
     align-items: center;
+    justify-content: flex-end;
+
+    @include breakpoint(md) {
+        width: 100%;
+    }
 }
 
 .header__phone {
@@ -128,6 +142,11 @@ header {
 
     @include breakpoint(md) {
         margin-right: 25px;
+        flex-shrink: 0;
+    }
+
+    @include breakpoint(lg) {
+        margin-right: 0;
     }
 }
 
@@ -153,6 +172,9 @@ header {
     @include breakpoint(md) {
         margin-right: 36px;
         display: block;
+        width: 100%;
+        max-width: 155px;
+        flex-shrink: 0;
     }
 
     @include breakpoint(lg) {
@@ -162,7 +184,8 @@ header {
 }
 
 .header__btn .button-style {
-    padding: 12px 32px;
+    padding: 12px 0;
+    width: 100%;
 }
 
 .header__burger {

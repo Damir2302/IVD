@@ -26,6 +26,7 @@ $(document).ready(function() {
     let aboutSlider = new Swiper('.about-slider .swiper', {
         slidesPerView: 2,
         spaceBetween: 10,
+        loop: true,
 
         breakpoints: {
             480: {
